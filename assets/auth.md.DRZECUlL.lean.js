@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as i,ag as t}from"./chunks/framework.B-XtCDNB.js";const c=JSON.parse('{"title":"Authentication","description":"","frontmatter":{},"headers":[],"relativePath":"auth.md","filePath":"auth.md"}'),n={name:"auth.md"};function o(r,e,h,l,p,d){return i(),s("div",null,[...e[0]||(e[0]=[t("",29)])])}const k=a(n,[["render",o]]);export{c as __pageData,k as default};
