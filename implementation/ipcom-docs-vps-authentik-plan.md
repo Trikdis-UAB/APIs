@@ -165,9 +165,20 @@ Keep source in a private GitHub repo, keep GitHub Actions for build/deploy, and 
 - Backup and rollback procedures are documented and tested.
 
 ## Rollout Timeline
+### Risk-Managed Timeline (3 weeks)
 - Week 1: VPS prep, Authentik + Caddy setup, internal auth testing.
 - Week 2: CI/CD deploy pipeline, pilot partner onboarding, rollback test.
 - Week 3: partner migration communication, phased cutover, legacy URL deprecation.
+
+### Why 3 weeks if setup is mostly boilerplate
+- The technical install itself is fast; most time is allocated to low-risk rollout tasks.
+- The buffer covers partner coordination, communication lead time, pilot validation, and rollback rehearsal.
+- This reduces outage and access-lockout risk during migration.
+
+### Fast-Track Timeline (1-3 days, higher rollout risk)
+- Day 1: Deploy Authentik + Caddy, apply invite-only policy, run internal auth tests, validate with one pilot partner.
+- Day 2: Finalize CI/CD deployment job, execute rollback test, publish onboarding instructions, go live.
+- Day 3 (optional): Post-go-live hardening (backup restore drill, log alert tuning, documentation cleanup).
 
 ## Assumptions and Defaults
 - Current decision is VPS-hosted docs, not Cloudflare-first.
